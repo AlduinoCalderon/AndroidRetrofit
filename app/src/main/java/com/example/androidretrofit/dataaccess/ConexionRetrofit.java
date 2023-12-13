@@ -16,7 +16,7 @@ public class ConexionRetrofit {
      Dispositivo real: ip de la computadora
      Otro emulador: buscar en la configuración la ip
      */
-    private static final String BASE_URL = "http://10.0.3.2:8001/";
+    private static final String BASE_URL = "http://10.0.2.2:8001/";
 
 
     public static Retrofit getInstanciaRetrofit(){
