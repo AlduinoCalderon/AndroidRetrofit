@@ -22,9 +22,9 @@ public class ValoresNormales {
     public String RangoNormal;
 
     @SerializedName("estado")
-    public int estado;
+    public Boolean estado;
 
-    public ValoresNormales(int id, String nombre, double valor_min, double valor_max, String unidades, String rangoNormal, int estado) {
+    public ValoresNormales(int id, String nombre, double valor_min, double valor_max, String unidades, String rangoNormal, Boolean estado) {
         this.id = id;
         this.Nombre = nombre;
         this.valor_min = valor_min;
@@ -34,7 +34,7 @@ public class ValoresNormales {
         this.estado = estado;
     }
 
-    public ValoresNormales(String nombre, double valor_min, double valor_max, String unidades, String rangoNormal, int estado) {
+    public ValoresNormales(String nombre, double valor_min, double valor_max, String unidades, String rangoNormal, Boolean estado) {
         this.Nombre = nombre;
         this.valor_min = valor_min;
         this.valor_max = valor_max;

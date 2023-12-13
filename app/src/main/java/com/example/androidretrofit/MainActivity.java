@@ -3,6 +3,7 @@ package com.example.androidretrofit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 Double.parseDouble(vista.etValorMax.getText().toString()),
                 vista.etUnidades.getText().toString(),
                 vista.etRangoNormal.getText().toString(),
-                (vista.rbTrue.isChecked()) ? 1 : 0
+                (vista.rbTrue.isChecked()) ? true : false
         );
 
         ValoresNormalesAPI api = ConexionRetrofit.getInstanciaRetrofit().create(ValoresNormalesAPI.class);
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 vista.etValorMax.setText(String.valueOf(valorResponse.valor_max));
                 vista.etUnidades.setText(valorResponse.Unidades);
                 vista.etRangoNormal.setText(valorResponse.RangoNormal);
-                if (valorResponse.estado == 1) {
+                if (valorResponse.estado == true) {
                     vista.rbTrue.setChecked(true);
                 } else {
                     vista.rbTrue.setChecked(false);
@@ -168,7 +169,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ValoresNormales> call, Throwable t) {
-                // Manejar el fallo
+                Log.e("API Error", "Fallo en la llamada API: " + t.getMessage());
+                Toast.makeText(getApplicationContext(),"Error en la respuesta: "+t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -180,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 Double.parseDouble(vista.etValorMax.getText().toString()),
                 vista.etUnidades.getText().toString(),
                 vista.etRangoNormal.getText().toString(),
-                (vista.rbTrue.isChecked()) ? 1 : 0
+                (vista.rbTrue.isChecked()) ? true : false
         );
 
         ValoresNormalesAPI api = ConexionRetrofit.getInstanciaRetrofit().create(ValoresNormalesAPI.class);
