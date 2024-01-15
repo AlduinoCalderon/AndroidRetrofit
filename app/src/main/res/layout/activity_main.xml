@@ -206,8 +206,10 @@
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="@+id/btnInsertar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toEndOf="@+id/btnInsertar"
-        app:layout_constraintTop_toTopOf="@+id/btnInsertar" />
+        app:layout_constraintTop_toTopOf="@+id/btnInsertar"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnEliminar"
@@ -228,10 +230,10 @@
         android:text="Insertar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
+        app:layout_constraintVertical_bias="0.833" />
 
     <Button
         android:id="@+id/btnActualizar"
@@ -243,5 +245,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnInsertar"
         app:layout_constraintTop_toBottomOf="@+id/btnInsertar" />
+
+    <Button
+        android:id="@+id/btnActivity"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
+        android:text="Resultados de análisis"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBuscar1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
